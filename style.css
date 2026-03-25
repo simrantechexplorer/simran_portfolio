@@ -5,6 +5,9 @@ body {
     color: #333;
 }
 
+
+/* HEADER */
+
 header {
     background: #111;
     color: white;
@@ -15,11 +18,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    /* important */
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
 
 nav ul li {
@@ -31,6 +38,9 @@ nav ul li a {
     text-decoration: none;
 }
 
+
+/* HERO */
+
 .hero {
     height: 80vh;
     display: flex;
@@ -40,6 +50,7 @@ nav ul li a {
     text-align: center;
     background: linear-gradient(135deg, #3e5971, #364b4c);
     color: white;
+    padding: 20px;
 }
 
 .hero h1 {
@@ -59,10 +70,17 @@ button {
     margin-top: 15px;
 }
 
+
+/* SECTIONS */
+
 section {
-    padding: 50px;
+    padding: 50px 20px;
+    /* better for mobile */
     text-align: center;
 }
+
+
+/* SKILLS */
 
 .skills-container {
     display: flex;
@@ -78,6 +96,9 @@ section {
     border-radius: 5px;
 }
 
+
+/* PROJECTS */
+
 .project {
     background: white;
     padding: 20px;
@@ -86,9 +107,67 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+/* FOOTER */
+
 footer {
     background: #111;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+
+/* ========================= */
+
+
+/* 📱 MOBILE RESPONSIVE */
+
+
+/* ========================= */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .project {
+        width: 90%;
+    }
+}
+
+
+/* ========================= */
+
+
+/* 📲 SMALL MOBILE */
+
+
+/* ========================= */
+
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        padding: 40px 15px;
+    }
+    .hero h2 {
+        font-size: 22px;
+    }
+    .skill {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    section {
+        padding: 30px 15px;
+    }
 }
